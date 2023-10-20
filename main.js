@@ -1,0 +1,10 @@
+console.log("Hello world");
+console.log("Cisco Javascript course");
+console.log("Tobechi Duru");
+console.log("1995");
+console.log(1995);
+console.log("Tobechi", "Duru", "1995");
+console.log("Tobechi \n Duru \n 1995");
+console.log("Tobechi" + "Duru" + "1995");
+console.log("Tobechi" + "Duru" + "(1995)");
+console.log("http://test.org");
