@@ -98,24 +98,46 @@ let sum = books[0].pages + books[1].pages + books[2].pages;
 
 console.log(`pages: ${sum}`);
 
-// COMMENTS PRACTICE
+// PERSONAL OBJECTS PRACTICE
 
-// "use strict"
 
-const prefix = "username_";
+let client1 = {
+  name: "Robert Brown",
+  occupation: "Software Engineer",
+  location: "United Kingdom",
+  age: "30 years old",
+};
 
-// let userName = "Jack";
-const userName = "Adam";
+client1.name = "James Brown";
+ console.log(client1.name);
+ console.log(`${client1.name}`);
+ delete client1.name
 
-// let prefixedUserName;
-// const prefixedUserName;
+ console.log(client1.name);
 
-userName = "John";
-prefixedUserName = prefix + userName;
+// PERSONAL ARRAYS PRACTICE
 
-// console.log(prefixedUserName + prefixedUserName2);
-console.log(prefixedUserName);
-;
+let fruites = ["Apple", "Orange", "Bannana", "Mango"];
+console.log(fruites[0]);
+console.log(fruites[1]);
+console.log(fruites[2]);
+console.log(fruites[3]);
+
+delete fruites[0];
+console.log(fruites[0]);
+
+fruites = ["Watermelon"];
+console.log(fruites[0]);
+
+if (30 > 15) {
+  console.log("you can drive!");
+}else console.log("sorry you can not drive!");
+
+
+
+
+
+
 
 
 
