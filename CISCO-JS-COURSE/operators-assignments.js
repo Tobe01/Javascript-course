@@ -226,8 +226,7 @@ let greetingss = greetings + "Newyear";
 
 console.log(greetingss);
 
-alert("hellow world");
-confirm("ready to proceed?");
+
 
 
 
