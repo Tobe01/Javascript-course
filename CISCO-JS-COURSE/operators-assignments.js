@@ -207,6 +207,33 @@ console.log(u);
 // EXERCISE:
 
 // Arithmetic operators:
+console.log(2 * 3 + 1);
+console.log(2 ** 4);
+console.log(5 - 1);
+console.log(8 ** 2 - 5 ** 2);
+
+// LOGICAL OPERATORS:
+
+console.log(true || false);
+console.log(false || false || true);
+console.log(true || false || false);
+console.log(!false);
+
+
+
+let greetings = "happy"
+let greetingss = greetings + "Newyear";
+
+console.log(greetingss);
+
+alert("hellow world");
+confirm("ready to proceed?");
+
+
+
+
+
+
 
 
 
