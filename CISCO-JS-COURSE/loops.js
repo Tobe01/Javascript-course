@@ -204,4 +204,4 @@ switch (gate) {
 }
 if (win) {
   alert("Winner");
-}
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
