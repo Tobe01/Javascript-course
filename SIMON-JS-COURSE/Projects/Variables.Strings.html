@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects 5A</title>
+  <title>Variables & If-Statements Projects</title>
 </head>
 
 <body>
@@ -42,6 +42,7 @@ console.log(`Cart quantity: ${cartQuantity}`);
 <button onclick="
 cartQuantity += 5
 console.log(`Cart quantity: ${cartQuantity}`);
+alert('The cart is full')
 ">+6
 </button>
 
@@ -55,18 +56,21 @@ console.log(`Cart quantity: ${cartQuantity}`);
 <button onclick="
 cartQuantity -- 
 console.log(`Cart quantity: ${cartQuantity}`);
+alert('Not enough items in the cart');
 ">Remove from cart
 </button>
 
 <button onclick="
 cartQuantity -=2
 console.log(`Cart quantity: ${cartQuantity}`);
+alert('Not enough items in the cart');
 ">-2
 </button>
 
 <button onclick="
 cartQuantity -=3
 console.log(`Cart Quantity: ${cartQuantity}`);
+alert('not enough items in the cart');
 ">-3
 </button>
 
