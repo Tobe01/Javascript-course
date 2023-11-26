@@ -16,26 +16,26 @@
 
     <button onclick="
     cartQuantity = cartQuantity + 1;
-    console.log(`Cart quantity: ${cartQuantity}`);
+    updateCartQuantity ();
     ">Add to Cart
     </button>
 
     <button onclick="
     cartQuantity = cartQuantity + 2;
-    console.log(`Cart quantity: ${cartQuantity}`);
+    updateCartQuantity ();
     ">+2
     </button>
 
     <button onclick="
     cartQuantity = cartQuantity + 3;
-    console.log(`Cart quantity: ${cartQuantity}`);
+    updateCartQuantity ();
     ">+3
     </button>
 
     <button onclick="
     cartQuantity = 0;
     console.log('Cart was reset');
-    console.log(`Cart quantity: ${cartQuantity}`);
+    updateCartQuantity ();
     ">Reset Cart
     </button>
 
@@ -43,6 +43,14 @@
 
 <script>
  let cartQuantity = 0;
+
+ function updateCartQuantity (){
+  console.log(`Cart quantity: ${cartQuantity}`);
+  if (cartQuantity === 0){
+    alert('The cart is empty')
+  }
+  return;
+ }
 </script>
 
 </html>
