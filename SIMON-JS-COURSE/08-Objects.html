@@ -46,6 +46,8 @@
   ties: 0,
  }
 
+ localStorage.getItem('score' JSON.parse(score));
+
 function gamePlay (playerMove){
   getMove ();
       
@@ -86,6 +88,9 @@ function gamePlay (playerMove){
         score.ties += 1;
         }
       }
+
+      localStorage.setItem('score'JSON.stringify(score));
+
 
       alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${result} \n Wins: ${score.wins}, Losses: ${score.losses}, Tie: ${score.ties}`);
 }
@@ -147,6 +152,19 @@ function getMove (){
       }
 
       console.log(product2);
+
+      // BUILD IN OBJECTS:
+      /* json, localstorage,
+
+      // NOTE:
+      /* To convert a Javascript file to a JSON file, we use STRINGIFY. example JSON.stringify();
+      while to convert a JSON object back to a Javascript object, we use PARSE. example JSON.parse();
+      */
+
+      /* LOCAL STORAGE: this is used to store values more permanently other than using variables beacause storing a value in Variable is temporary unlike when its stored in Local storage which is more safe and permanent*/ 
+
+      console.log(JSON.stringify(product2));
+      console.log(JSON.parse(JSON.stringify(product2)));
 
   </script>
 
