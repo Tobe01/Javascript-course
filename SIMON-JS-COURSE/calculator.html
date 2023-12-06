@@ -64,7 +64,6 @@
 
    </p>
 
-   
    <p>
     
     <button onclick="
@@ -93,7 +92,6 @@
 
    </p>
 
-   
    <p>
     
     <button onclick="
@@ -125,19 +123,22 @@
    <button onclick="
       calculation = 0;
       console.log('cleared.')
-      ">Clear
+      alert('Cleared!')
+
+      localStorage.removeItem('calculation');
+      ">Clear 
    </button>
+
+   
 
    <p><a href="www.google.com">Click here</a> to see the final version of the project.</p>
 
-
-
    <script>
-     let calculation = "";
 
-     function updateCalculation (){
-       console.log(calculation);
-     }
+    let calculation = JSON.parse(localStorage.getItem('calculation')) || '';
+   
+    localStorage.setItem('calculation', JSON.stringify(calculation));
+
    </script>
 
 </body>
