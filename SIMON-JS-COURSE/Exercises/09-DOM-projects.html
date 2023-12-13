@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM PROJECTS</title>
+</head>
+
+<body>
+
+  <p>YouTube Subscribe Button</p>
+
+  <button class="js-button" onclick="
+  subscribe ();
+  
+  ">Subscribe</button>
+
+
+  <p>Rock Paper Scissors</p>
+  <p><a href="www.google.com">click here</a></p>
+
+
+  <p>Amazon Shipping Calculator</p>
+  <p>Orders under $40 = +$10 shipping</p>
+  <p>Orders over $40 = FREE shipping</p>
+
+  <input type="search" placeholder="Cost of order"><button>Calculation</button>
+
+
+  <p><a href="www.google.com">CSS version of these projects</a></p>
+
+  <script>
+
+    function subscribe (){
+
+      const buttonElement = document.querySelector('.js-button');
+
+      if (buttonElement.innerHTML === 'Subscribe'){
+        buttonElement.innerHTML = 'Subscribed';
+      } else {
+        buttonElement.innerHTML = 'Subscribe';
+      }
+    }
+
+  </script>
+
+</body>
+
+</html>

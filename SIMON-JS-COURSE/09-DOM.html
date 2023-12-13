@@ -8,10 +8,35 @@
 
 <body>
   
-  <button>hello</button>
+  <button>First Button</button>
+
+  <button class="js-button">Second Button</button>
 
   <script>
- document.body.innerHTML = 'hello';
+
+  console.log(document.querySelector('button'));
+
+  document.querySelector('button').innerHTML = 'Hi';
+
+  console.log(document.querySelector('button').innerHTML = 'Hi');
+
+  console.log(document.querySelector('.js-button').innerHTML = 'Working fine');
+
+  const buttonElement = document.querySelector('.js-button');
+
+  console.log(buttonElement);
+
+
+
+  /*
+    document.body.innerHTML = '';
+    document.body.innerHTML = 'Cleared';
+
+    document.title = 'Practical';
+
+    document.body.innerHTML = 'hello';
+    document.title = 'Money';
+*/
   </script>
 
 </body>
