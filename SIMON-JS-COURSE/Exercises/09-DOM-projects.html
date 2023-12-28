@@ -11,8 +11,7 @@
   <p>YouTube Subscribe Button</p>
 
   <button class="js-button" onclick="
-  subscribe ();
-  
+    subscribe ();
   ">Subscribe</button>
 
 
@@ -30,17 +29,16 @@
   <p><a href="www.google.com">CSS version of these projects</a></p>
 
   <script>
+  function subscribe (){
+  
+    let buttonElement = document.querySelector('.js-button');
 
-    function subscribe (){
+    if (buttonElement.innerHTML === 'Subscribe'){
+      buttonElement.innerHTML = 'Subscribed';
+    } else {buttonElement.innerHTML = 'Subscribe';
 
-      const buttonElement = document.querySelector('.js-button');
-
-      if (buttonElement.innerHTML === 'Subscribe'){
-        buttonElement.innerHTML = 'Subscribed';
-      } else {
-        buttonElement.innerHTML = 'Subscribe';
-      }
     }
+  }
 
   </script>
 
