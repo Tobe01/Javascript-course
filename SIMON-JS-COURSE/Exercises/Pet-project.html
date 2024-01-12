@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pet Project</title>
+</head>
+
+
+<body>
+
+ <div>
+  <p>Starlink Complete Standard Kit: High-</p>
+  <p>Speed, Low-Latency Internet</p>
+  <p>Brand: Starlink | Similare products from Starlink</p>
+ </div> 
+
+<div style="border-top: 1px solid grey; border-bottom: 1px solid grey;">
+  <p>&#8358; 1,560,000.00 <span style="text-decoration: line-through;">&#8358; 2,500,000.00</span></p>
+  <p>3 units left</p>
+  <p>+ shipping from &#8358; 250 to LEKKI-AJAH (SANGOTEDO)</p>
+  <P>(No ratings available)</P>
+</div>
+
+<D>
+  <p>VARIATION AVAILABLE</p>
+
+  <p><button>None</button></p>
+  
+  <p><button style="width: 350px; height: 30px;" onclick="
+
+  itemQuantity ++;
+  
+  alert('Product Added successfully');
+
+  items();
+
+  count();
+  
+  ">Add to cart</button></p>
+
+  <div style="display: flex; margin-bottom: 20px; align-items: center; max-height: 30px;">
+
+    <button style="height: 30px; width: 40px; margin-right: 15px;"
+    onclick="
+      
+      itemQuantity -= 1;
+      items();
+
+      count();
+
+      alert('Item quantity has been updated');
+      
+    ">-</button> 
+  
+    <P class="js-count"></P>
+      
+    <button style="height: 30px; width: 40px; margin-left: 15px; margin-right: 15px;" 
+      onclick="
+        
+          itemQuantity ++;
+          items();
+
+          count();
+
+          alert('Product added successfully');
+        
+      ">+</button>
+  
+      <p class="js-items"></p>
+
+  </div>
+
+
+  <button style="width: 100px; height: 30px; margin-right: 5px;" onclick="
+  itemQuantity = 0;
+
+   items();
+
+   count();
+
+   alert(`Cart has been reset! \n Available Items: ${itemQuantity}`);
+   console.log('Cart is empty!');
+
+   localStorage.removeItem('itemQuantity');
+  
+  ">Reset Cart</button>
+
+  <button style="width: 100px; height: 30px;" onclick="
+
+    alert(`Available Items: ${itemQuantity}`);
+   
+  ">View Cart</button>
+
+</div>
+
+</body>
+
+ <script>
+
+   let itemQuantity = JSON.parse(localStorage.getItem('itemQuantity')) || '';
+
+   function items (){
+
+    document.querySelector('.js-items').innerHTML = `(${itemQuantity} item(s) added)`;
+
+   };
+
+   function count (){
+
+    document.querySelector('.js-count').innerHTML =  `${itemQuantity}`;
+
+    localStorage.setItem('itemQuantity', JSON.stringify(itemQuantity));
+
+   };
+
+ </script>
+
+</html>

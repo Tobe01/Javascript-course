@@ -11,34 +11,32 @@
   <p>YouTube Subscribe Button</p>
 
   <button class="js-button" onclick="
-    subscribe ();
+   
+   subscribeButton();
+
   ">Subscribe</button>
 
 
-  <p>Rock Paper Scissors</p>
-  <p><a href="www.google.com">click here</a></p>
-
-
   <p>Amazon Shipping Calculator</p>
-  <p>Orders under $40 = +$10 shipping</p>
-  <p>Orders over $40 = FREE shipping</p>
 
-  <input type="search" placeholder="Cost of order"><button>Calculation</button>
+  <p>Orders under $40= +$10 Shipping</p>
 
+  <p>Orders over $40= FREE shipping</p>
 
-  <p><a href="www.google.com">CSS version of these projects</a></p>
+  <input type="text" placeholder="Cost of order">
+  <button>Calculate</button>
 
   <script>
-  function subscribe (){
-  
-    let buttonElement = document.querySelector('.js-button');
 
-    if (buttonElement.innerHTML === 'Subscribe'){
+    function subscribeButton (){
+      let buttonElement = document.querySelector('.js-button');
+
+      if (buttonElement.innerHTML === 'Subscribe'){
       buttonElement.innerHTML = 'Subscribed';
-    } else {buttonElement.innerHTML = 'Subscribe';
-
+      } else {
+      buttonElement.innerHTML = 'Subscribe';
+      };
     }
-  }
 
   </script>
 
