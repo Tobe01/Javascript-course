@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM</title>
+</head>
+
+<body>
+ 
+  <!-- <button>9a</button> -->
+
+  <!-- <button class="js-btn">9b</button> -->
+
+  <button onclick="
+
+     moves();
+
+ ">heads</button>
+
+  <button onclick="
+
+     moves2();
+
+  ">tails</button>
+
+  <p class="js-headsTails"></p>
+
+</body>
+
+<script>
+
+  function moves(){
+
+        document.querySelector('.js-headsTails').innerHTML = 'You chose: heads';
+
+  }
+
+  function moves2(){
+
+        document.querySelector('.js-headsTails').innerHTML = 'You chose: tails';
+
+  }
+
+  
+
+/*
+    console.log(document.querySelector('button'));
+
+    document.querySelector('.js-btn').innerHTML = '9b done!';
+*/
+
+</script>
+
+</html>

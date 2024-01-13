@@ -10,9 +10,9 @@
 
   <p>YouTube Subscribe Button</p>
 
-  <button class="js-button" onclick="
-   
-   subscribeButton();
+  <button class="js-subscribeButton" onclick="
+
+   subscribeButton()
 
   ">Subscribe</button>
 
@@ -24,20 +24,23 @@
   <p>Orders over $40= FREE shipping</p>
 
   <input type="text" placeholder="Cost of order">
+
   <button>Calculate</button>
 
   <script>
 
-    function subscribeButton (){
-      let buttonElement = document.querySelector('.js-button');
+    function subscribeButton(){
+
+      let buttonElement = document.querySelector('.js-subscribeButton');
 
       if (buttonElement.innerHTML === 'Subscribe'){
-      buttonElement.innerHTML = 'Subscribed';
+        buttonElement.innerHTML = 'Subscribed';
       } else {
-      buttonElement.innerHTML = 'Subscribe';
+        buttonElement.innerHTML = 'Subscribe';
       };
-    }
 
+    }
+    
   </script>
 
 </body>

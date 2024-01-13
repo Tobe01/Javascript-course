@@ -7,50 +7,91 @@
 
   <body>
   
-    <p>Cart Quantity</p>
+      <p>Cart Quantity</p>
+      
+      <p>
 
-    <button onclick="
-    console.log(`Cart quantity: 0`);
-    ">Show Quantity
-    </button>
+      </p>
+      <button onclick="
+      updateCartQuantity ();
+      ">Show Quantity
+      </button>
 
-    <button onclick="
-    cartQuantity = cartQuantity + 1;
-    updateCartQuantity ();
-    ">Add to Cart
-    </button>
+      <button onclick="
+      cartQuantity = cartQuantity + 1;
+      updateCartQuantity ();
+      ">Add to Cart
+      </button>
 
-    <button onclick="
-    cartQuantity = cartQuantity + 2;
-    updateCartQuantity ();
-    ">+2
-    </button>
+      <button onclick="
+      cartQuantity = cartQuantity + 2;
+      updateCartQuantity ();
+      ">+2
+      </button>
 
-    <button onclick="
-    cartQuantity = cartQuantity + 3;
-    updateCartQuantity ();
-    ">+3
-    </button>
+      <button onclick="
+      cartQuantity = cartQuantity + 3;
+      updateCartQuantity ();
+      ">+3
+      </button>
 
-    <button onclick="
-    cartQuantity = 0;
-    console.log('Cart was reset');
-    updateCartQuantity ();
-    ">Reset Cart
-    </button>
+      <button onclick="
+      cartQuantity += 4;
+      updateCartQuantity();
+      ">+4</button>
 
-  </body>
+      <button onclick="
+      cartQuantity += 5;
+      updateCartQuantity();
+      ">+5</button>
+
+    <p>
+
+      <button onclick="
+      cartQuantity -= 1;
+      updateCartQuantity();
+      ">Remove from cart</button>
+  
+      <button onclick="
+      cartQuantity -= 2;
+      updateCartQuantity();
+      ">-2</button>
+  
+      <button onclick="
+      cartQuantity -= 3;
+      updateCartQuantity();
+      ">-3</button>
+  
+      <button onclick="
+      cartQuantity = 0;
+      alert('cart was reset!');
+      updateCartQuantity ();
+
+      localStorage.removeItem('cartQuantity');
+
+      ">Reset Cart
+      </button>
+
+    </p>
+
+    <p class="js-quantity"></p>
+
+</body>
 
 <script>
- let cartQuantity = 0;
 
- function updateCartQuantity (){
-  console.log(`Cart quantity: ${cartQuantity}`);
-  if (cartQuantity === 0){
-    alert('The cart is empty')
-  }
-  return;
- }
+      let cartQuantity = JSON.parse(localStorage.getItem('cartQuantity')) || 0;
+
+      function updateCartQuantity (){
+
+        document.querySelector('.js-quantity').innerHTML = `Cart Quantity: ${cartQuantity}`;
+
+        localStorage.setItem('cartQuantity', JSON.stringify(cartQuantity));
+
+        return;
+
+      }
+
 </script>
 
 </html>

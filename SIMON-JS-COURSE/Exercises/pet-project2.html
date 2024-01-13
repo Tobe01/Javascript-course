@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pet Project-Calculator</title>
+</head>
+
+<body style="background-color: black;">
+
+<p class="js-calculation"></p>
+  
+<p>
+  <button style="background-color: rgb(108, 105, 105); color: white; width: 52px; height: 52px; border-radius: 26px; border: none; font-size: 25px;"
+  onclick="
+    calculation += 1;
+    calculate();
+    
+    ">1</button>
+
+  <button style="background-color: rgb(108, 105, 105); color: white; width: 52px; height: 52px; border-radius: 26px; border: none; font-size: 25px;"
+  onclick="
+   calculation += 2;
+   calculate();
+  
+  ">2</button>
+
+  <button style="background-color: rgb(108, 105, 105); color: white; width: 52px; height: 52px; border-radius: 26px; border: none; font-size: 25px;"
+  onclick="
+  calculation += 3;
+  calculate();
+
+  ">3</button>
+
+  <button style="background-color: rgb(216, 158, 11);  color: white; width: 52px; height: 52px; border-radius: 26px; border: none; font-size: 25px;"
+  onclick="
+  calculation += '+';
+  calculate();
+  
+  ">+</button>
+</p>
+
+<p>
+  <button style="background-color: rgb(108, 105, 105); color: white; width: 52px; height: 52px; border-radius: 26px; border: none; font-size: 25px;"
+  onclick="
+    calculation += 4;
+    calculate();
+    
+    ">4</button>
+
+  <button style="background-color: rgb(108, 105, 105); color: white; width: 52px; height: 52px; border-radius: 26px; border: none; font-size: 25px;"
+  onclick="
+    calculation += 5;
+    calculate();
+  
+  ">5</button>
+
+  <button style="background-color: rgb(108, 105, 105); color: white; width: 52px; height: 52px; border-radius: 26px; border: none; font-size: 25px;"
+  onclick="
+    calculation += 6;
+    calculate();
+  
+  ">6</button>
+
+  <button style="background-color: rgb(216, 158, 11); color: white; width: 52px; height: 52px; border-radius: 26px; border: none; font-size: 25px;"
+  onclick="
+    calculation += '-'
+    calculate();
+  
+  ">-</button>
+</p>
+
+<p>
+  <button style="background-color: rgb(108, 105, 105); color: white; width: 52px; height: 52px; border-radius: 26px; border: none; font-size: 25px;"
+  onclick="
+    calculation += 7;
+    calculate();
+    
+    ">7</button>
+
+  <button style="background-color: rgb(108, 105, 105); color: white; width: 52px; height: 52px; border-radius: 26px; border: none; font-size: 25px;"
+  onclick="
+    calculation += 8;
+    calculate(); 
+  
+  ">8</button>
+
+  <button style="background-color: rgb(108, 105, 105); color: white; width: 52px; height: 52px; border-radius: 26px; border: none; font-size: 25px;"
+  onclick="
+    calculation += 9;
+    calculate();
+  
+  ">9</button>
+
+  <button style="background-color: rgb(216, 158, 11); color: white; width: 52px; height: 52px; border-radius: 26px; border: none; font-size: 25px;"onclick="
+    calculation += '*';
+    calculate();
+  
+  ">*</button>
+</p>
+
+<p>
+  <button style="background-color: rgb(108, 105, 105); color: white; width: 52px; height: 52px; border-radius: 26px; border: none; font-size: 25px;"
+  onclick="
+    calculation += '0';
+    calculate();
+    
+    ">0</button>
+
+  <button style="background-color: rgb(108, 105, 105); color: white; width: 52px; height: 52px; border-radius: 26px; border: none; font-size: 25px;"
+  onclick="
+    calculation += '.';
+    calculate();
+
+  ">.</button>
+
+  <button style="background-color: rgb(108, 105, 105); color: white; width: 52px; height: 52px; border-radius: 26px; border: none; font-size: 25px;"
+  onclick="
+    calculation = eval(calculation);
+    calculate();
+  
+  ">=</button>
+
+  <button style="background-color: rgb(216, 158, 11); color: white; width: 52px; height: 52px; border-radius: 26px; border: none; font-size: 25px;"onclick="
+    calculation += '/';
+    calculate();
+  
+  ">/</button>
+</p>
+
+  <button style="background-color: rgb(108, 105, 105); color: white; width: 52px; height: 52px; border-radius: 26px; border: none; font-weight: bold;"
+  onclick="
+    calculation = 0;
+    calculate();
+
+  ">Clear</button>
+
+  <button style="background-color: rgb(108, 105, 105); color: white; width: 52px; height: 52px; border-radius: 26px; border: none; font-weight: bold;"
+  onclick="
+    calculate();
+    localStorage.removeItem('calculation');
+
+  ">View</button>
+
+<p style="color: white;"><a href="www.google.com">Click here</a> to see the final version of the project</p>
+
+<style>
+  .js-calculation {
+    color: white;
+    font-size: 25px;
+  }
+</style>
+
+</body>
+
+  <script>
+
+    let calculation = JSON.parse(localStorage.getItem('calculation')); 
+    
+
+    function calculate (){
+      document.querySelector('.js-calculation').innerHTML = calculation;
+       
+      localStorage.setItem('calculation', JSON.stringify(calculation));
+    }
+
+  </script>
+
+</html>
