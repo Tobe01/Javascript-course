@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amazon Project</title>
+</head>
+
+<body>
+
+ <p>Review your order</p>
+
+ <div style="display: flex;">
+
+  <div style="display: flex; padding-left: 6px; border: 1px solid grey; width: 700px;">
+
+    <div style="width: 80%;">
+      <p>Delivery date: Wednesday. January 24</p>
+      <div style="display: flex; width: 350px; justify-content: space-around;">
+        <div>
+          <img src="Thumbnails/intermediate-composite-basketball.jpg" style="width: 100px;">
+        </div>
+        <div>
+          <p>Intermediate Size Basketball</p>
+          <p>$20.95</p>
+          <div style="display: flex;">          
+            <p class="js-quantity"></p>
+            <button style="border: none; background-color: white; margin-left: 3px;" onclick="
+              quantity += 1;
+              price += 20.95;
+              tax = 0.10;
+              estimatedTax = price * tax;
+
+              document.querySelector('.js-estimatedTax').innerHTML = `Estimated tax (10%): $${estimatedTax}`;
+
+              document.querySelector('.js-quantity').innerHTML = `Quantity: ${quantity}`;
+
+              document.querySelector('.js-items').innerHTML = `items (${quantity}): $${price}`;
+
+              document.querySelector('.js-totalBefore').innerHTML = `Total before tax: $${price}`;
+
+              document.querySelector('.js-shipping').innerHTML = `Shipping & handling: $${shipping}`;
+
+
+            ">Update</button>
+
+            <button style="border: none; background-color: white;" onclick="
+              quantity -= 1;
+              price -= 20.95;
+              tax = 0.10;
+              estimatedTax = price * tax;
+              
+
+              document.querySelector('.js-estimatedTax').innerHTML = `Estimated tax (10%): $${estimatedTax}`;
+
+              document.querySelector('.js-quantity').innerHTML = `Quantity: ${quantity}`;
+
+              document.querySelector('.js-items').innerHTML = `items (${quantity}): $${price}`;
+
+              document.querySelector('.js-totalBefore').innerHTML = `Total before tax: $${price}`; 
+
+              document.querySelector('.js-shipping').innerHTML = `Shipping & handling: $${shipping}`;
+
+            ">Remove</button>
+
+          </div>
+            <button onclick="
+            quantity = 0;
+            price = 0;
+            totalBeforeTax = 0;
+            shipping = 0;
+            tax = 0.10;
+            estimatedTax = price * tax;
+
+            document.querySelector('.js-estimatedTax').innerHTML = `Estimated tax (10%): $${estimatedTax}`;
+
+            document.querySelector('.js-quantity').innerHTML = `Quantity: ${quantity}`;
+
+            document.querySelector('.js-items').innerHTML = `items (${quantity}): $${price}`;
+
+            document.querySelector('.js-totalBefore').innerHTML = `Total before tax: $${price}`;
+
+            document.querySelector('.js-shipping').innerHTML = `Shipping & handling: $${shipping}`;
+
+          ">Reset</button>
+        </div>
+      </div>
+    </div>
+
+    <div style="width: 50%;">
+      <p>Choose a delivery option:</p>
+      <div style="display: flex;">
+          <input type="checkbox" onchange="
+           shipping = 0;
+
+         document.querySelector('.js-shipping').innerHTML = `Shipping & handling: $${shipping}`;
+          ">
+        <div>
+          <p>Wednesday, January 24</p>
+          <p>FREE Shipping</p>
+        </div>
+      </div>
+    
+      <div style="display: flex;">
+          <input type="checkbox" onchange="
+           shipping = 4.99;
+        
+           document.querySelector('.js-shipping').innerHTML = `Shipping & handling: $${shipping}`;
+
+          ">
+        <div>
+          <p>Thursday, January 18</p>
+          <p>$4.99 - Shipping</p>
+        </div>
+      </div>
+    
+      <div style="display: flex;">
+          <input type="checkbox" onchange="
+           shipping = 9.99;
+    
+           document.querySelector('.js-shipping').innerHTML = `Shipping & handling: $${shipping}`;
+
+          ">
+        <div>
+          <p>Tuesday, January 16</p>
+          <p>$9.99 - Shipping</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div style="border: 1px solid grey; padding-left: 6px; height: 350px; width: 250px; margin-left:10px;">
+    <div>
+      <p>Order Summary</p>
+      <p class="js-items"></p>
+      <p class="js-shipping"></p>
+      <p class="js-totalBefore"></p>
+      <p class="js-estimatedTax"></p>
+    </div>
+  
+    <div style="border-top: 1px solid grey">
+      <p class="orderTotal"></p>
+      <div style="display: flex;">
+        <p>Use PayPal</p>
+        <input type="checkbox">
+      </div>
+      <div style="display: flex; align-items: center; justify-content: center; margin: auto;">
+        <button style="width: 80%; height: 30px; ">Place your order</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+
+<script>
+
+   let quantity = '';
+
+   let price = '';
+
+   let totalBeforeTax = '';
+
+   let tax = 0.10;
+
+   let priceless = 0;
+
+   let estimatedTax = price * tax;
+
+   let shipping = '';
+
+   document.querySelector('.js-quantity').innerHTML = `Quantity: ${quantity}`;
+
+   document.querySelector('.js-items').innerHTML = `items (${quantity}):          ${price}`;
+
+   document.querySelector('.js-totalBefore').innerHTML = `Total before tax: $${price}`;
+
+   document.querySelector('.js-estimatedTax').innerHTML = `Estimated tax (10%): $${estimatedTax}`;
+
+   document.querySelector('.js-shipping').innerHTML = `Shipping & handling: $${shipping}`;
+
+</script>
+
+</html>

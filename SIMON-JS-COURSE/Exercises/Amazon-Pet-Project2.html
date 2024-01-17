@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amazon Project 2</title>
+</head>
+
+<body>
+
+  <div>
+    <div></div>
+  </div>
+  
+  <b>Your Orders</b>
+
+  <div style="display: flex; flex-direction: column; padding: 10px 10px 10px 10px;  border: 1px solid grey; margin-top: 20px; width: 700px;">
+    <div style="display: flex; background-color: rgb(238, 238, 238); justify-content: space-between;">
+      <div style="display: flex; width: 400px;">
+        <div>
+          <b>Order Placed:</b>
+          <p>January 16</p>
+        </div>
+        <div style="margin-left: 38px;">
+          <b>Total:</b>
+          <p>$35.06</p>
+        </div>
+      </div>
+      <div>
+        <b>Order ID:</b>
+        <p>27cba69d-4c3d-4098-b42d-ac7fa62b7664</p>
+      </div>
+    </div>
+
+    <div style="display: flex; justify-content: space-between; border-top: 1px solid grey;">
+     <div style="display: flex;">
+        <div><img src="Thumbnails/adults-plain-cotton-tshirt-2-pack-teal (1).jpg" style="width: 100px; margin-right: 15px; padding: 10px 0 0 10px;">
+        </div>
+        <div>
+          <p>Black and Gray Athletic Cotton Socks - 6 Pairs</p>
+          <p>Arriving on: January 19</p>
+          <p>Quantity: 1</p>
+          <button style="width: 130px; height: 30px; background-color: gold; border: none; border-radius: 5px;" class="js-buyagain" onclick="
+          
+          if (buttonElement.innerHTML === 'Buy it again'){
+          buttonElement.innerHTML = '&#10004; Added';
+          } else {
+            buttonElement.innerHTML = 'Buy it again';
+          };
+
+          setTimeout(function () {
+            buttonElement.innerHTML = 'Buy it again';
+          }, 2000);
+                
+          ">Buy it again</button>
+        </div>
+     </div>
+     
+     <div style="margin: auto; align-items: center; justify-content: center;">
+      <button style="height: 40px; width: 160px; border-radius: 5px; border: 1px solid rgb(213, 213, 213)">Track Package</button>
+     </div>
+    </div>
+
+  </div>
+
+  <script>
+
+    let buttonElement = document.querySelector('.js-buyagain');
+
+  </script>
+
+</body>
+
+</html>
