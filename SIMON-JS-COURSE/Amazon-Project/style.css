@@ -1,0 +1,16 @@
+/* CSS Source codes for Amazon Project */
+
+.cart {
+  position: relative;
+}
+
+.js-cart {
+  position: absolute;
+  top: -6px;
+  bottom: 0;
+  left: 7px;
+  right: 0;
+  font-weight: bold;
+  font-size: 16px;
+  color: goldenrod;
+}
