@@ -13,7 +13,7 @@ let sizes = {
 
 let quantity = 0;
 
-let amount = 0;
+let amount = 24.00;
 
 let buttonElement = document.querySelector('.js-buyAgain');
 
