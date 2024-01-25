@@ -10,38 +10,87 @@
   <p>Amazon Shipping Calculator</p>
 
   <p>Orders under $40 = + $10 shipping</p>
+
   <p>Orders over $$0 = FREE shipping</p>
    
   <input class="js-input" placeholder="Cost of order" onkeydown="
-   document.querySelector('.js-cost').innerHTML = 'typing...';
-
-   if (event.key === 'Enter'){
-    calculate();
-   }
+   events ();
   ">
 
   <button class="js-calculateBtn" onclick="
-  calculate();
-  
+   calculate();
   ">Calculate</button>
 
   <p class="js-cost"></p>
 
+  <p>Document Object Model Practice</p>
+
+  <button class="js-button">9a</button>
+
+  <button class="js-btn" onclick="
+     done ();
+  
+  ">9b</button>
+
+  <button class="js-heads" onclick="
+   document.querySelector('.js-display').innerHTML = 'You chose: heads';
+  ">heads</button>
+
+  <button class="js-tails" onclick="
+  document.querySelector('.js-display').innerHTML = 'You chose: tails';
+  ">tails</button>
+
+  <p class="js-display"></p>
+
+  <input>
+
+  <button>Submit</button>
+
+  <p></p>
+
+  <input>
+  <p></p>
+
 
   <script>
 
+     function calculate (){
 
-    function calculate(){
-
-      const inputElement = document.querySelector('.js-input');
+      let inputElement = document.querySelector('.js-input');
       let cost = Number(inputElement.value);
 
       if (cost < 40){
-      cost = cost + 10;
+        cost = Math.round(cost + 10);
       }
 
       document.querySelector('.js-cost').innerHTML = `$${cost}`;
-    }
+     }
+
+     function events (){
+
+      document.querySelector('.js-cost').innerHTML = 'typing...';
+
+      if (event.key === 'Enter'){
+      calculate();
+      }
+     }
+
+     console.log(document.querySelector('.js-button'));
+
+     function done (){
+      let buttonElement = document.querySelector('.js-btn');
+
+      if (buttonElement.innerHTML === '9b'){
+      buttonElement.innerHTML = '9b done!';
+      } else {
+        buttonElement.innerHTML = '9b'
+      };
+
+      setTimeout(function (){
+      buttonElement.innerHTML = '9b';
+      }, 2000);
+
+     };
 
   </script>
   
