@@ -1,5 +1,9 @@
 // Javascript source code for Amazone project
 
+function goToPage(url){
+  window.location.href = url;
+}
+
 let colors = {
   color1: '',
   color2: '',
@@ -67,3 +71,4 @@ document.querySelector('.js-added').innerHTML = '&#x2705; Added';
 document.querySelector('.js-items').innerHTML = `Items(${quantity}):`;
 
 document.querySelector('.js-amount').innerHTML = ` $${amount}`;
+

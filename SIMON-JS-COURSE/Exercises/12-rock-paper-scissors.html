@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Paper Scissors</title>
+  <script src="scripts/12-rock-paper-scissors.js"></script>
+</head>
+
+<body style="font-size: 12px; background-color: rgb(25, 25, 25); color: white; font-family: arial;">
+  
+  <!-- Rock paper scissors project -->
+  <p style="font-size: 30px; font-weight: bold;">Rock Paper Scissors</p>
+
+  <button onclick="gamePlay('Rock');" style="margin-right: 9px; cursor: pointer; width: 85px; background-color:  rgb(25, 25, 25); border: 3px solid white; width: 97px; height: 95px; border-radius: 50%;">
+  <img style="width: 40px;" src="images/rock-emoji.png">
+  </button>
+
+  <button onclick="gamePlay('Paper');"  style="margin-right: 9px; cursor: pointer; width: 85px; background-color:  rgb(25, 25, 25); border: 3px solid white; width: 97px; height: 95px; border-radius: 50%;"><img style="width: 40px;" src="images/paper-emoji.png"></button>
+
+  <button onclick="gamePlay('Scissors');" style="width: 85px; cursor: pointer; background-color:  rgb(25, 25, 25); border: 3px solid white; width: 97px; height: 95px; border-radius: 50%;"><img style="width: 40px;" src="images/scissors-emoji.png"></button>
+
+  <p style="font-weight: bold; font-size: 23px; margin-top: 50px;" class="js-result"></p>
+
+  <p class="js-moves"></p>
+
+  <p style="margin-top: 60px;" class="js-score"></p>
+
+  <button style="cursor: pointer; background-color: white; padding: 5px 8px; border: none;" onclick="
+   score = {
+      Wins: 0,
+      Losses: 0, 
+      Ties: 0,
+   };
+
+   localStorage.removeItem('score');
+
+   updateScore();
+
+   console.log(`score was reset! \n Wins: ${score.Wins}, Losses: ${score.Losses}, Ties: ${score.Ties}`);
+  
+  ">Reset Score</button>
+
+  <button style="cursor: pointer; background-color: white; padding: 5px 8px; border: none;">Auto Play</button>
+
+</body>
+
+</html>

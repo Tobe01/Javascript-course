@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced function</title>
+</head>
+
+<body>
+
+  <button class="js-start" onclick="change();">Start</button>
+  <button class="js-revert" onclick="revert();">Finished!</button>
+  <button class="js-addToCart" onclick="addContents();">Add to cart</button>
+  <p class="js-contents"></p>
+  
+  <script>
+    let add = function(){
+      2 + 3
+    }
+
+    function change(){
+    const change = document.querySelector('.js-start');
+
+    if (change.innerHTML === 'Start'){
+      change.innerHTML = 'Finished!';
+    } else {
+      change.innerHTML = 'Start';
+    }
+
+    setTimeout(() => {
+      if(change.innerHTML === 'Finished!'){
+        change.innerHTML = 'Start';
+      } else {
+        change.innerHTML = 'Finished';
+      }
+    }, 1000);
+  }
+
+  function revert(){
+  const revert = document.querySelector('.js-revert');
+
+  if (revert.innerHTML === 'Finished!'){
+    revert.innerHTML = 'Loading...';
+  } else {
+    revert.innerHTML = 'Finished!';
+  }
+
+  setTimeout(() => {
+    if (revert.innerHTML === 'Loading...'){
+      revert.innerHTML = 'Finished!';
+    } else {
+      revert.innerHTML = 'Loading...';
+    }
+  }, 1000)
+}
+
+function addContents(){
+let alert = 'Added';
+
+document.querySelector('.js-contents').innerHTML = alert;
+
+setTimeout (() => {
+ document.querySelector('.js-contents').innerHTML = '';
+}, 2000)
+}
+  </script>
+</body>
+
+</html>

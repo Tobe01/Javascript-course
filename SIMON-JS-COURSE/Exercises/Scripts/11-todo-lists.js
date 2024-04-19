@@ -1,14 +1,17 @@
-const todoList = [];
+const todoList = ['make dinner', 'wash dishes'];
 
-function addTodo (){
-  const inputElement = document.querySelector('.js-name-input');
+function todoItems (){
 
-  const name = inputElement.value;
+  const inputElement = document.querySelector('.js-input');
+  let name = inputElement.value;
 
   todoList.push(name);
+
   console.log(todoList);
 
   inputElement.value = '';
+
 }
+
 
 

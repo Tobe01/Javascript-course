@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Review</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js"></script>
+</head>
+
+<body style="height: 3000px; font-size: 16px;">
+
+  <section id="Checkout">
+
+    <div style="background-color: white; display: flex; margin: auto; align-items: center; justify-content: space-around; position: fixed; top: 0; left: 0; right: 0;">
+
+      <div style="margin-left: 20px; cursor: pointer;" onclick="goToPage('Amazon-Pet-Project.html');">
+        <img style="width: 70px;" src="Thumbnails/download.png">
+      </div>
+
+      <div style="font-size: 25px; height: 50px; margin: auto; display: flex; align-items: center; justify-content: center;">
+        <b>Checkout (0 items)</b>
+      </div>
+
+    </div>
+
+  </section>
+
+  <section id="Review Order" style="margin-top: 100px;">
+
+    <p style="margin-top: 50px; margin-left: 20px; font-weight: bold; font-size: 25px;">Review your order</p>
+
+    <div style="display: flex;">
+    
+     <div style="display: flex; margin-left: 20px; padding-top: 20px; padding-left: 20px; border: 1px solid rgb(200, 200, 200); width: 700px; border-radius: 5px;">
+    
+       <div style="width: 80%;">
+         <b style="color: green;">Delivery date: Wednesday. January 24</b>
+         <div style="display: flex; width: 350px; justify-content: space-around;">
+           <div>
+             <img src="Thumbnails/men-cozy-fleece-zip-up-hoodie-red.jpg" style="width: 100px; margin-top: 30px;">
+           </div>
+           <div style="margin-top: 30px;">
+             <b>Men's Full-Zip Hooded Fleece</b>
+             <b style="display: block; margin-bottom: 5px;">Sweatshirt</b>
+             <b style="color: rgb(221, 4, 4);">$24.00</b>
+             <p class="js-color" style="margin: 0; margin-top: 5px;"></p>
+             <p class="js-size" style="margin: 0; margin-top: 3px;"></p>
+             <div style="display: flex;">          
+               <p class="js-update"></p>
+               <button style="border: none; color:rgb(171, 171, 255); background-color: white; margin-left: 3px;" onclick="
+
+                  quantity += 1;
+
+                  amount = 24.00 + 24.00;
+
+                  document.querySelector('.js-update').innerHTML = `Quantity: ${quantity}`;
+
+                  document.querySelector('.js-cart').innerHTML = quantity;
+
+                  buttonElement = document.querySelector('.js-buyAgain');  
+
+                  document.querySelector('.js-items').innerHTML = `Items(${quantity}):`;
+
+                  
+                  document.querySelector('.js-amount').innerHTML = ` $${amount}`;
+    
+               ">Update</button>
+    
+               <button style="border: none; color:rgb(171, 171, 255); background-color: white;" onclick="
+                 
+                quantity -= 1;
+
+                amount -= 24.00;
+
+                document.querySelector('.js-update').innerHTML = `Quantity: ${quantity}`;
+
+                document.querySelector('.js-cart').innerHTML = quantity;
+
+                buttonElement = document.querySelector('.js-buyAgain');
+
+                document.querySelector('.js-items').innerHTML = `Items(${quantity}):`;
+
+                document.querySelector('.js-amount').innerHTML = ` $${amount}`;
+    
+               ">Remove</button>
+    
+                </div>
+                  <button onclick="
+                  quantity = 0;
+                  amount = 0;
+                  document.querySelector('.js-update').innerHTML = `Quantity: ${quantity}`;
+
+                  document.querySelector('.js-cart').innerHTML = quantity;
+
+                  buttonElement = document.querySelector('.js-buyAgain');
+
+                  document.querySelector('.js-items').innerHTML = `Items(${quantity}):`;
+
+                  document.querySelector('.js-amount').innerHTML = ` $${amount}`;
+        
+                ">Reset</button>
+              </div>
+         </div>
+       </div>
+
+    <div style="width: 50%; margin-top: 49px;">
+      <b>Choose a delivery option:</b>
+      <div style="display: flex; margin-top: 20px;">
+          <input type="radio">
+ 
+        <div>
+          <b style="color: green;">Wednesday, January 24</b>
+          <p style="margin: 0; color: rgb(184, 184, 184); margin-bottom: 9px;">FREE Shipping</p>
+        </div>
+      </div>
+    
+      <div style="display: flex;">
+          <input type="radio">
+        <div>
+          <b style="color: green;">Thursday, January 18</b>
+          <p style="margin: 0; color: rgb(184, 184, 184); margin-bottom: 9px;">$4.99 - Shipping</p>
+        </div>
+      </div>
+    
+      <div style="display: flex;">
+          <input type="radio">
+        <div>
+          <b style="color: green;">Tuesday, January 16</b>
+          <p style="margin: 0; color: rgb(184, 184, 184)";>$9.99 - Shipping</p>
+        </div>
+      </div>
+    </div>
+ 
+  </div>
+
+
+    <div style="border: 1px solid rgb(200, 200, 200); padding: 20px 8px 0 8px; height: 300px; width: 250px; margin-left:10px; border-radius: 5px;">
+      <b>Order Summary</b>
+      <div style="display: flex; justify-content: space-between;">
+        <div>        
+          <p class="js-items"></p>
+          <p class="js-shipping"></p>
+          <p class="js-totalBefore"></p>
+          <p class="js-estimatedTax"></p></div>
+        <div>
+          <p class="js-amount"></p>
+          <p></p>
+          <p></p>
+          <p></p>
+        </div>
+      </div>
+    
+      <div style="border-top: 1px solid rgb(200, 200, 200)">
+        <p class="orderTotal"></p>
+        <div style="display: flex;">
+          <p>Use PayPal</p>
+          <input type="checkbox">
+        </div>
+        <div style="display: flex; align-items: center; justify-content: center; margin: auto;">
+          <button style="width: 80%; height: 30px; border: none; border-radius: 5px; background-color: goldenrod;">Place your order</button>
+        </div>
+      </div>
+    </div>
+   
+   </div>
+   
+
+  </section>
+
+</body>
+
+</html>

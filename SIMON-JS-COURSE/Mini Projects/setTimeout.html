@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SetTimeout practice</title>
+  <script src="setTimeout.js"></script>
+</head>
+
+<body>
+  <h1>My Happy Form</h1>
+
+    <div>
+      <input class="js-firstName-input" style="display: block; padding: 4px 2px;" placeholder="First Name">
+      <input class="js-lastName-input" style="display: block; padding: 4px 2px; margin: 3px 0;" placeholder="Last Name">
+    </div>
+  
+    <textarea class="js-textContents"  style="padding-bottom: 20px; padding-right: 4px;"></textarea>
+
+  <p>Subscribe to Newsletter <input type="checkbox"></p>
+
+  <button class="js-submitButton" style="padding: 6px 20px; background-color: green; color: white; font-size: 15px; border: none; border-radius: 3px;" onclick="getfirstNameInput(); getlastNameInput(); submitForm(); textContents();">Submit</button>
+
+ <div style="margin-top: 10px;" class="js-output"></div>
+</body>
+
+</html>

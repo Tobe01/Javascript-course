@@ -3,27 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Amazon Project 2</title>
+  <title>Amazon Project</title>
   <link rel="stylesheet" href="style.css">
   <script src="main.js"></script>
 </head>
 
-<body style="height: 3000px;">
+<body style="height: 3000px; font-size: 16px;">
 
   <section id="Header">
 
     <div style="display: flex; position: fixed; top: 0; left: 0; right: 0; background-color: black; color: white; justify-content: space-between;">
-      <div style="display: flex; align-items: center; justify-content: center; margin: auto;"><img style="width: 100px;" src="Thumbnails/download.png"></div>
+      <div style="cursor: pointer; display: flex; align-items: center; justify-content: center; margin: auto;"><img style="width: 100px;" onclick="goToPage('Amazon-Pet-Project.html')" src="Thumbnails/download.png"></div>
       <div style="display: flex; margin: auto; align-items: center; justify-content: center; height: 35px; width: 780px;">
         <input style="width: 0; flex: 1; border: none; padding-left: 5px; height: 37px; border-top-left-radius: 7px; border-bottom-left-radius: 7px " placeholder="Search">
         <button style="height: 39px; border-top-right-radius: 7px; border-bottom-right-radius: 7px; width: 50px; border: none; background-color: goldenrod;"><img style="width: 20px;" src="Thumbnails/search-icon.png"></button>
       </div>
       <div style="display: flex; height: 60px; font-size: 14px; margin-left: auto; margin-right: 20px; align-items: center; justify-content: space-between; width: 140px;">
-        <div style="height: 60px;">
+        <div style="height: 60px; cursor: pointer;" onclick="goToPage('Orders.html');">
           <p style="margin-bottom: 0;">Returns</p>
           <b style="margin-top: 0;">& Orders</b>
         </div>
-        <div style="display: flex; height: 60px; align-items: center; justify-content: center;">
+        <div style="display: flex; height: 60px; align-items: center; justify-content: center; cursor: pointer;" onclick="goToPage('Review.html');">
           <div class="cart">
             <img style="width: 45px" src="Thumbnails/cart-icon.png">
             <div class="js-cart" style="text-align: center;"></div>
@@ -35,232 +35,9 @@
 
   </section>
 
-  <section id="Checkout">
-
-    <div style="font-size: 25px; height: 50px; margin: auto; margin-top: 100px; display: flex; align-items: center; justify-content: center;">
-      <b>Checkout (0 items)</b>
-    </div>
-
-  </section>
-
-  <section id="Review Order">
-
-    <p style="margin-top: 50px; margin-left: 20px; font-weight: bold; font-size: 25px;">Review your order</p>
-
-    <div style="display: flex;">
-    
-     <div style="display: flex; margin-left: 20px; padding-top: 20px; padding-left: 20px; border: 1px solid rgb(200, 200, 200); width: 700px; border-radius: 5px;">
-    
-       <div style="width: 80%;">
-         <b style="color: green;">Delivery date: Wednesday. January 24</b>
-         <div style="display: flex; width: 350px; justify-content: space-around;">
-           <div>
-             <img src="Thumbnails/men-cozy-fleece-zip-up-hoodie-red.jpg" style="width: 100px; margin-top: 30px;">
-           </div>
-           <div style="margin-top: 30px;">
-             <b>Men's Full-Zip Hooded Fleece</b>
-             <b style="display: block; margin-bottom: 5px;">Sweatshirt</b>
-             <b style="color: rgb(221, 4, 4);">$24.00</b>
-             <p class="js-color" style="margin: 0; margin-top: 5px;"></p>
-             <p class="js-size" style="margin: 0; margin-top: 3px;"></p>
-             <div style="display: flex;">          
-               <p class="js-update"></p>
-               <button style="border: none; color:rgb(171, 171, 255); background-color: white; margin-left: 3px;" onclick="
-
-                  quantity += 1;
-
-                  amount = 24.00 + 24.00;
-
-                  document.querySelector('.js-update').innerHTML = `Quantity: ${quantity}`;
-
-                  document.querySelector('.js-cart').innerHTML = quantity;
-
-                  buttonElement = document.querySelector('.js-buyAgain');  
-
-                  document.querySelector('.js-items').innerHTML = `Items(${quantity}):`;
-
-                  
-                  document.querySelector('.js-amount').innerHTML = ` $${amount}`;
-    
-               ">Update</button>
-    
-               <button style="border: none; color:rgb(171, 171, 255); background-color: white;" onclick="
-                 
-                quantity -= 1;
-
-                amount -= 24.00;
-
-                document.querySelector('.js-update').innerHTML = `Quantity: ${quantity}`;
-
-                document.querySelector('.js-cart').innerHTML = quantity;
-
-                buttonElement = document.querySelector('.js-buyAgain');
-
-                document.querySelector('.js-items').innerHTML = `Items(${quantity}):`;
-
-                document.querySelector('.js-amount').innerHTML = ` $${amount}`;
-    
-               ">Remove</button>
-    
-                </div>
-                  <button onclick="
-                  quantity = 0;
-                  amount = 0;
-                  document.querySelector('.js-update').innerHTML = `Quantity: ${quantity}`;
-
-                  document.querySelector('.js-cart').innerHTML = quantity;
-
-                  buttonElement = document.querySelector('.js-buyAgain');
-
-                  document.querySelector('.js-items').innerHTML = `Items(${quantity}):`;
-
-                  document.querySelector('.js-amount').innerHTML = ` $${amount}`;
-        
-                ">Reset</button>
-              </div>
-         </div>
-       </div>
-
-    <div style="width: 50%; margin-top: 49px;">
-      <b>Choose a delivery option:</b>
-      <div style="display: flex; margin-top: 20px;">
-          <input type="radio">
- 
-        <div>
-          <b style="color: green;">Wednesday, January 24</b>
-          <p style="margin: 0; color: rgb(184, 184, 184); margin-bottom: 9px;">FREE Shipping</p>
-        </div>
-      </div>
-    
-      <div style="display: flex;">
-          <input type="radio">
-        <div>
-          <b style="color: green;">Thursday, January 18</b>
-          <p style="margin: 0; color: rgb(184, 184, 184); margin-bottom: 9px;">$4.99 - Shipping</p>
-        </div>
-      </div>
-    
-      <div style="display: flex;">
-          <input type="radio">
-        <div>
-          <b style="color: green;">Tuesday, January 16</b>
-          <p style="margin: 0; color: rgb(184, 184, 184)";>$9.99 - Shipping</p>
-        </div>
-      </div>
-    </div>
- 
-  </div>
-
-
-    <div style="border: 1px solid rgb(200, 200, 200); padding: 20px 8px 0 8px; height: 300px; width: 250px; margin-left:10px; border-radius: 5px;">
-      <b>Order Summary</b>
-      <div style="display: flex; justify-content: space-between;">
-        <div>        
-          <p class="js-items"></p>
-          <p class="js-shipping"></p>
-          <p class="js-totalBefore"></p>
-          <p class="js-estimatedTax"></p></div>
-        <div>
-          <p class="js-amount"></p>
-          <p></p>
-          <p></p>
-          <p></p>
-        </div>
-      </div>
-    
-      <div style="border-top: 1px solid rgb(200, 200, 200)">
-        <p class="orderTotal"></p>
-        <div style="display: flex;">
-          <p>Use PayPal</p>
-          <input type="checkbox">
-        </div>
-        <div style="display: flex; align-items: center; justify-content: center; margin: auto;">
-          <button style="width: 80%; height: 30px; border: none; border-radius: 5px; background-color: goldenrod;">Place your order</button>
-        </div>
-      </div>
-    </div>
-   
-   </div>
-   
-
-  </section>
-
-  <section id="Your Orders">
-
-    <p style="font-weight: bold; font-size: 25px; margin-left: 250px; margin-bottom: 0;">Your Orders</p>
-
-    <div style="display: flex; flex-direction: column;">
-  
-      <div style="display: flex; margin-left: 20px; border-radius: 5px; flex-direction: column; padding-bottom: 10px; border: 1px solid rgb(200, 200, 200); margin-top: 20px; width: 700px;">
-        <div style="display: flex; padding-top: 10px; padding-left: 10px; padding-right: 10px; background-color: rgb(238, 238, 238); justify-content: space-between;">
-          <div style="display: flex; width: 400px; margin: 10px 0 17px 0;">
-            <div>
-              <b style="margin: 0;">Order Placed:</b>
-              <p style="margin: 0;">January 16</p>
-            </div>
-            <div style="margin-left: 38px;">
-              <b style="margin: 0;">Total:</b>
-              <p class="amount" style="margin: 0;"></p>
-            </div>
-          </div>
-          <div style="margin-top: 9px;">
-            <b style="margin: 0;">Order ID:</b>
-            <p style="margin: 0;">27cba69d-4c3d-4098-b42d-ac7fa62b7664</p>
-          </div>
-        </div>
-    
-        <div style="display: flex; justify-content: space-between; border-top: 1px solid rgb(200, 200, 200);">
-         <div style="display: flex; margin-top: 20px;">
-            <div><img src="Thumbnails/men-cozy-fleece-zip-up-hoodie-red.jpg" style="width: 100px; margin-right: 15px; padding: 10px 0 0 10px;">
-            </div>
-            <div>
-              <b >Men's Full-Zip Hooded Fleece Sweatshirt</b>
-              <p style="margin: 0; margin-top: 7px;">Arriving on: January 19</p>
-              <p class="js-update" style="margin: 0;"></p>
-              <button class="js-buyAgain" style="margin-top: 10px; width: 130px; height: 30px; background-color: gold; border: none; border-radius: 5px;" onclick="
-              
-              quantity += 1;
-
-              amount = 24.00 + 24.00;
-
-              buttonElement = document.querySelector('.js-buyAgain');
-
-              if (buttonElement.innerHTML === 'Buy it again'){
-                buttonElement.innerHTML = '&#10004; Added';
-              } else {
-                buttonElement.innerHTML === 'Buy it again';
-              };
-
-                      setTimeout(function () {
-                buttonElement.innerHTML = 'Buy it again';
-              }, 2000); 
-
-              document.querySelector('.js-update').innerHTML = `Quantity: ${quantity}`;
-
-              document.querySelector('.js-cart').innerHTML = quantity;
-
-              document.querySelector('.js-items').innerHTML = `Items(${quantity}):`;
-
-              querySelector('.js-amount').innerHTML = ` $${amount}`;
-
-              ">Buy it again</button>
-            </div>
-         </div>
-         
-         <div style="margin: auto; align-items: center; justify-content: center;">
-          <button style="height: 40px; width: 160px; border-radius: 5px; border: 1px solid rgb(213, 213, 213)">Track Package</button>
-         </div>
-        </div>
-    
-      </div>
-  
-    </div>
-
-  </section>
-
   <section id="Add to Cart">
 
-    <div style="border: 1px solid rgb(200, 200, 200); width: 220px; height: 530px; padding: 30px 20px 0 20px; margin-left: 20px; margin-top: 20px;">
+    <div style="border: 1px solid rgb(200, 200, 200); width: 220px; height: 530px; padding: 30px 20px 0 20px; margin-left: 20px; margin-top: 80px;">
 
       <div style="display: flex; flex-direction: column;">
         <div style="margin: auto;">
