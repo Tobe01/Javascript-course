@@ -23,3 +23,4 @@ function addTodo (){
     inputElement.value = '';
     todo();
 }
+
